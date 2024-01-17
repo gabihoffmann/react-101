@@ -4,8 +4,19 @@ import { LifeCycle } from "./LifeCycle";
 import { WrongCounter } from "./WrongCounter";
 
 function App() {
+  let text = "text";
+  function changeText() {
+    text = "text2";
+    console.log("chamei o change text: ", text);
+  }
+
+  console.log("log do app", text);
+
   return (
     <div>
+      <div>Teste: {text}</div>
+      <button onClick={changeText}>change text</button>
+
       <h1>Hello React App!</h1>
       <section>
         <h2>Props and Children</h2>
