@@ -1,4 +1,5 @@
 import { Button } from "./Button";
+import { CallbackHook } from "./CallbackHook";
 import { Counter } from "./Counter";
 import { LifeCycle } from "./LifeCycle";
 import { WrongCounter } from "./WrongCounter";
@@ -35,6 +36,11 @@ function App() {
       <section>
         <h2>useEffect and Life Cycle</h2>
         <LifeCycle />
+      </section>
+
+      <section>
+        <h2>useCallback</h2>
+        <CallbackHook />
       </section>
     </div>
   );
