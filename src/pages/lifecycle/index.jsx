@@ -8,11 +8,16 @@ export function LifeCyclePage() {
     <section about="life cycle">
       <div className="title">
         <h2>Life Cycle and useEffect</h2>
+        <span>Look the console 👀</span>
       </div>
       <div className="content">
         <div className="container">
           <div className="box">
-            <button onClick={() => setIsShow((prev) => !prev)}>click</button>
+            <button onClick={() => setIsShow((prev) => !prev)}>
+              {isShow ? "unmount" : "mount"}
+            </button>
+            <br />
+            <br />
             <div>{isShow && <EffectComponent />}</div>
           </div>
           <div className="code">

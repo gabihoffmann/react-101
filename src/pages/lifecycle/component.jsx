@@ -44,7 +44,7 @@ export const code = `const [number, setNumber] = useState(0);
     console.log("effect without array");
   });
 `;
-export function EffectComponent(props) {
+export function EffectComponent() {
   const [number, setNumber] = useState(0);
 
   useEffect(() => {
@@ -91,8 +91,6 @@ export function EffectComponent(props) {
 
   return (
     <div className="box">
-      <span>props: {String(props.status)}</span>
-      <br />
       <span>hello {number}</span>
       <br />
       <button onClick={() => setNumber((prev) => ++prev)}>change number</button>
