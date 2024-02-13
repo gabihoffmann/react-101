@@ -1,49 +1,23 @@
-import { Button } from "./Button";
-import { CallbackHook } from "./CallbackHook";
-import { Counter } from "./Counter";
-import { LifeCycle } from "./LifeCycle";
-import { WrongCounter } from "./WrongCounter";
+import React from "react";
 
-function App() {
-  let text = "text";
-  function changeText() {
-    text = "text2";
-    console.log("chamei o change text: ", text);
-  }
+import { RouterProvider } from "react-router-dom";
+import { routersName, routes } from "./routes";
 
-  console.log("log do app", text);
-
+export function App() {
   return (
-    <div>
-      <div>Teste: {text}</div>
-      <button onClick={changeText}>change text</button>
-
-      <h1>Hello React App!</h1>
-      <section>
-        <h2>Props and Children</h2>
-        <Button text={"olá"}>
-          <strong>Hello</strong>
-        </Button>
-      </section>
-
-      <section>
-        <h2>State and useState</h2>
-        <WrongCounter />
-        <br />
-        <Counter />
-      </section>
-
-      <section>
-        <h2>useEffect and Life Cycle</h2>
-        <LifeCycle />
-      </section>
-
-      <section>
-        <h2>useCallback</h2>
-        <CallbackHook />
-      </section>
+    <div className="container">
+      <nav className="navigation">
+        <ul>
+          {routersName.map((route, index) => (
+            <li key={index}>
+              <a href={route.path}>{route.name}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <main className="content">
+        <RouterProvider router={routes} />
+      </main>
     </div>
   );
 }
-
-export default App;
