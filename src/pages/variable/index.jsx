@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-const code = `const [, setState] = useState();
-
-let text = "text";
+const code = `let text = "text";
 
 function changeText() {
-  text = text-random(${Math.random().toFixed(2)});
-  console.log("chamei o change text: ", text);
+  text = text_\${Math.random().toFixed(2)};
+  console.log("change text value: ", text);
 }
 
-console.log("log do app:", text);
+console.log("render component:", text);
 `;
 
 export function LocalVariablePage() {
@@ -18,11 +16,11 @@ export function LocalVariablePage() {
   let text = "text";
 
   function changeText() {
-    text = `text-random(${Math.random().toFixed(2)})`;
-    console.log("chamei o change text: ", text);
+    text = `text_${Math.random().toFixed(2)}`;
+    console.log(`%c change text value: ${text}`, "color: red");
   }
 
-  console.log("log do app:", text);
+  console.log("render component:", text);
 
   return (
     <section about="variable">
@@ -33,7 +31,9 @@ export function LocalVariablePage() {
       <div className="content">
         <div className="container">
           <div className="box">
-            <div>Teste: {text}</div>
+            <div>
+              Text: <span className="secondary">{text}</span>
+            </div>
             <button onClick={changeText}>change text</button>
             <br />
             <br />

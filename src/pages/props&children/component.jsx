@@ -14,7 +14,8 @@ export function Component(props) {
   return (
     <div className="container">
       <div className="box">
-        <span> props: {props.text}</span>
+        <span> props text: {props.text}</span>
+        <span> props let: {props.let}</span>
         <br />
         <br />
         <button>{props.text}</button>

@@ -1,10 +1,7 @@
 import { useState } from "react";
 
 const code = `
-console.log("render Counter");
-
   const [counter, setCounter] = useState(0);
-  console.log("<Counter> counter: ", counter);
 
   function sum() {
     setCounter((prev) => prev + 1);
@@ -13,15 +10,13 @@ console.log("render Counter");
   function force() {
     setTimeout(() => {
       setCounter((prev) => prev + 1);
-      // setCounter(counter + 1);
+      setCounter(counter + 1); //bad
     }, 2000);
   }
 `;
 export function Counter() {
-  console.log("render Counter");
-
   const [counter, setCounter] = useState(0);
-  console.log("<Counter> counter: ", counter);
+  console.log(`re-render counter: ${counter}`);
 
   function sum() {
     setCounter((prev) => prev + 1);
@@ -30,7 +25,8 @@ export function Counter() {
   function force() {
     setTimeout(() => {
       setCounter((prev) => prev + 1);
-      // setCounter(counter + 1);
+      //bad
+      setCounter(counter + 1);
     }, 2000);
   }
 

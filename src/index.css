@@ -24,6 +24,11 @@ code {
   margin: 1rem;
 }
 
+.secondary {
+  color: red;
+  font-weight: 600;
+}
+
 section {
   display: flex;
   flex-direction: column;

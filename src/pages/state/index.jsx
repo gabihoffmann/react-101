@@ -1,5 +1,4 @@
 import { Counter } from "./Counter";
-import { WrongCounter } from "./WrongCounter";
 
 export function StatePage() {
   return (
@@ -9,8 +8,6 @@ export function StatePage() {
         <span>Look the console 👀</span>
       </div>
       <div className="content">
-        <WrongCounter />
-        <br />
         <Counter />
       </div>
     </section>
