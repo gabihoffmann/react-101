@@ -56,7 +56,7 @@ export function CallbackHookPage() {
 
   const handleSetCounterCallbackUp = useCallback(() => {
     setCounterCallback((prev) => ++prev);
-    alert("dependence:", dependenceCallback);
+    console.log("dependence:", dependenceCallback);
     setCallbackUp.add(handleSetCounterCallbackUp);
   }, [dependenceCallback]);
 

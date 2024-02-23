@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-
 import { LocalVariablePage } from "./pages/variable";
 import { PropsAndChildrenPage } from "./pages/props&children";
 import { StatePage } from "./pages/state";

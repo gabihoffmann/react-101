@@ -1,7 +1,7 @@
 import { Component } from "./component";
 
 export function PropsAndChildrenPage() {
-  let state = 0;
+  let state = "0";
   function updateVariable() {
     state = Math.random().toFixed(2);
     console.log(`%c update variable: ${state}`, "color: red");

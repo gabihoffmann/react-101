@@ -11,7 +11,7 @@ console.log("render component:", text);
 `;
 
 export function LocalVariablePage() {
-  const [, setState] = useState();
+  const [, setState] = useState(0);
 
   let text = "text";
 
@@ -37,7 +37,9 @@ export function LocalVariablePage() {
             <button onClick={changeText}>change text</button>
             <br />
             <br />
-            <button onClick={setState}>force re-render</button>
+            <button onClick={() => setState(Math.random())}>
+              force re-render
+            </button>
           </div>
           <div className="code">
             <div>

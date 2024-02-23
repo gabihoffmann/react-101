@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 const code = `export function Component(props) {
   return (
     <div>
@@ -10,7 +12,12 @@ const code = `export function Component(props) {
     );
   }`;
 
-export function Component(props) {
+interface ComponentProps {
+  let: string;
+  text: string;
+  children?: ReactNode;
+}
+export function Component(props: ComponentProps) {
   return (
     <div className="container">
       <div className="box">
