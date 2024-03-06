@@ -7,13 +7,13 @@
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.11.19",
-    "@types/react": "^18.2.57",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.63",
     "@types/react-dom": "^18.2.19",
     "npm-check-updates": "^16.14.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.1",
+    "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "typescript": "^5.3.3",
     "web-vitals": "^3.5.2"
@@ -23,8 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "check-up": "yarn ncu",
-    "up": "yarn ncu -u"
+    "check-up": "pnpm ncu",
+    "up": "pnpm ncu -u"
   },
   "eslintConfig": {
     "extends": [
