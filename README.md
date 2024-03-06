@@ -11,6 +11,7 @@ Este projeto React foi criado para explorar e compreender os conceitos básicos 
 - **Children**: Uso dos elementos filhos passados para um componente React.
 - **Ciclo de Vida de um Aplicativo**: Entendimento do ciclo de vida dos componentes React.
 - **Hooks**: Funções especiais que permitem usar estado e outras características do React em componentes funcionais.
+- **Context API**: Permite o compartilhamento de dados de forma ampliada entre componentes e evitando o _prop drilling_
 
 ## Run Locally
 

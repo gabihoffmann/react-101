@@ -4,6 +4,7 @@ import { PropsAndChildrenPage } from "./pages/props&children";
 import { StatePage } from "./pages/state";
 import { LifeCyclePage } from "./pages/lifecycle";
 import { CallbackHookPage } from "./pages/useCallback";
+import { ContextApiPage } from "./pages/contextApi";
 
 export const routersName = [
   {
@@ -35,6 +36,11 @@ export const routersName = [
     name: "useCallback",
     path: "/usecallback",
     element: <CallbackHookPage />,
+  },
+  {
+    name: "Context API",
+    path: "/contextapi",
+    element: <ContextApiPage />,
   },
 ];
 export const routes = createBrowserRouter(routersName);
